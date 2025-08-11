@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work - Tanvi Patel</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header/Logo -->
+        <header class="header">
+            <a href="index.html" class="logo-link">
+                <h1 class="logo">Tanvi Patel</h1>
+            </a>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Work Section -->
+            <div class="work-section">
+                <h2 class="main-heading">WORK</h2>
+                <div class="work-content">
+                    
+                    <div class="map-container">
+                        <iframe src="qgis-project/index.html" width="100%" height="500px" frameborder="0"
+                            style="border: 2px solid #34495e; border-radius: 8px;"></iframe>
+                    </div>
+                    
+                    <div class="expandable-section">
+                        <h3 class="expandable-heading" onclick="toggleContent()">
+                            QGIS Project: Housing Analysis in Sydney LGAs
+                            <i class="fas fa-chevron-down" id="toggle-icon"></i>
+                        </h3>
+                        <div class="expandable-content" id="expandable-content">
+                            <p class="bio">
+                                Ever wondered where were maximum houses purchased till 2021? This map illustrates the number
+                                of houses purchased in 2021. According to data from the Australian Bureau of Statistics
+                                (Census 2021), the highest number of house purchases occurred in the postcodes 2145, 2153,
+                                2155, 2170, 2250, 2259, 2261, 2560, 2570 and 2650.
+                            </p>
+                            <p class="bio">
+                                In this analysis, the term 'houses' refers to the combined total of dwellings classified as:
+                                Separate houses; semi-detached, row or terrace houses, townhouses etc. with one storey; and
+                                semi-detached, row or terrace houses, townhouses etc. with two or more storeys.
+                            </p>
+
+                            <div class="postcode-details">
+                                <h4>Suburbs/Area names for each of the listed postcodes:</h4>
+                                <ul class="postcode-list">
+                                    <li><strong>2145</strong> – Westmead / Wentworthville / Greystanes</li>
+                                    <li><strong>2153</strong> – Baulkham Hills</li>
+                                    <li><strong>2155</strong> – Rouse Hill / Kellyville</li>
+                                    <li><strong>2170</strong> – Liverpool</li>
+                                    <li><strong>2250</strong> – Gosford / Narara / Wyoming</li>
+                                    <li><strong>2259</strong> – Wyong / Tuggerah / Warnervale</li>
+                                    <li><strong>2261</strong> – Bateau Bay / The Entrance</li>
+                                    <li><strong>2560</strong> – Campbelltown</li>
+                                    <li><strong>2570</strong> – Camden / Oran Park</li>
+                                    <li><strong>2650</strong> – Wagga Wagga</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Second Project -->
+                    <div class="project-image-container">
+                        <img src="assets/project1-img1.jpeg" alt="Project 1" class="project-image" id="project-image" onclick="toggleImage()">
+                    </div>
+                    
+                    <div class="expandable-section">
+                        <h3 class="expandable-heading" onclick="toggleContent2()">
+                            Urban Planning Analysis
+                            <i class="fas fa-chevron-down" id="toggle-icon2"></i>
+                        </h3>
+                        <div class="expandable-content" id="expandable-content2">
+                            <p class="bio">
+                                Boral owns a 1,020-hectare site at Waurn Ponds, Geelong, formerly used for quarrying. With extraction activities winding down, the site is now earmarked for redevelopment. Macroplan, a leading urban economics and planning consultancy, has been engaged to deliver a planning pathway and development strategy, assessing potential mixed uses including residential, commercial, industrial, tourism, and recreation.
+                            </p>
+                            <p class="bio">
+                                I contributed to this project by assisting Macroplan in the creation of South-West Geelong Investigation Precinct maps, which were instrumental in defining land-use opportunities and guiding strategic planning discussions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <nav class="navigation">
+                <div class="button-row">
+                    <a href="index.html" class="nav-button">HOME</a>
+                    <a href="work.html" class="nav-button active">WORK</a>
+                    <a href="contact.html" class="nav-button">CONTACT</a>
+                </div>
+            </nav>
+
+            <!-- Social Media Icons -->
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/tanvi-patel-ua3014/" class="social-icon">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="mailto:tanvipatel2596@gmail.com" class="social-icon">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://ptanvi2596490a.myportfolio.com/" class="social-icon">
+                    <i class="fas fa-globe"></i>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function toggleContent() {
+            const content = document.getElementById('expandable-content');
+            const icon = document.getElementById('toggle-icon');
+            
+            if (content.style.display === 'none' || content.style.display === '') {
+                content.style.display = 'block';
+                icon.className = 'fas fa-chevron-up';
+            } else {
+                content.style.display = 'none';
+                icon.className = 'fas fa-chevron-down';
+            }
+        }
+
+        function toggleContent2() {
+            const content = document.getElementById('expandable-content2');
+            const icon = document.getElementById('toggle-icon2');
+            
+            if (content.style.display === 'none' || content.style.display === '') {
+                content.style.display = 'block';
+                icon.className = 'fas fa-chevron-up';
+            } else {
+                content.style.display = 'none';
+                icon.className = 'fas fa-chevron-down';
+            }
+        }
+
+        function toggleImage() {
+            const currentImage = document.getElementById('project-image');
+            if (currentImage.src.includes('project1-img1.jpeg')) {
+                currentImage.src = 'assets/project1.jpeg';
+            } else {
+                currentImage.src = 'assets/project1-img1.jpeg';
+            }
+        }
+    </script>
+</body>
+
+</html>
