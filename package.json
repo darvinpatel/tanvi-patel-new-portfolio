@@ -1,0 +1,26 @@
+{
+  "name": "tanvi-patel-portfolio",
+  "version": "1.0.0",
+  "description": "Tanvi Patel's portfolio website with QGIS maps",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'Static site - no build process needed'",
+    "dev": "npx serve .",
+    "deploy": "netlify deploy --prod --dir=."
+  },
+  "keywords": [
+    "portfolio",
+    "qgis",
+    "urban-planning",
+    "static-site"
+  ],
+  "author": "Tanvi Patel",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/darvinpatel/tanvi-patel-new-portfolio.git"
+  }
+}
