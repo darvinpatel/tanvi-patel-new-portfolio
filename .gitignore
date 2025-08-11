@@ -51,3 +51,7 @@ jspm_packages/
 .env.development.local
 .env.test.local
 .env.production.local
+
+# Large QGIS data files (hosted externally)
+qgis-project/layers/LGA_2024_AUST_GDA2020_2.js
+qgis-project/layers/PurchasedHouses2021_1.js
