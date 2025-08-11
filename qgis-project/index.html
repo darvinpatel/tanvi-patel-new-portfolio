@@ -43,7 +43,7 @@
             margin: 0;
         }
         </style>
-        <title>QGIS Map - Tanvi Patel Portfolio</title>
+        <title></title>
     </head>
     <body>
         <div id="map">
@@ -57,30 +57,10 @@
         <script src="./resources/ol.js"></script>
         <script src="./resources/ol-layerswitcher.js"></script>
         <script src="resources/photon-geocoder-autocomplete.min.js"></script>
-        
-        <!-- Large files will be loaded from external hosting -->
-        <!-- <script src="layers/PurchasedHouses2021_1.js"></script> -->
-        <!-- <script src="layers/LGA_2024_AUST_GDA2020_2.js"></script> -->
-        <script src="layers/Purchasedseparatehouses_3.js"></script>
+        <script src="layers/PurchasedHouses2021_1.js"></script><script src="layers/LGA_2024_AUST_GDA2020_2.js"></script><script src="layers/Purchasedseparatehouses_3.js"></script>
         <script src="styles/PurchasedHouses2021_1_style.js"></script><script src="styles/LGA_2024_AUST_GDA2020_2_style.js"></script><script src="styles/Purchasedseparatehouses_3_style.js"></script>
         <script src="./layers/layers.js" type="text/javascript"></script> 
         <script src="./resources/Autolinker.min.js"></script>
         <script src="./resources/qgis2web.js"></script>
-        
-        <script>
-        // Add loading indicator
-        document.addEventListener('DOMContentLoaded', function() {
-            const map = document.getElementById('map');
-            map.innerHTML += '<div id="loading" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; border-radius: 5px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); z-index: 1000;">Loading map data...</div>';
-            
-            // Remove loading indicator after map loads
-            setTimeout(function() {
-                const loading = document.getElementById('loading');
-                if (loading) {
-                    loading.style.display = 'none';
-                }
-            }, 3000);
-        });
-        </script>
     </body>
 </html>
