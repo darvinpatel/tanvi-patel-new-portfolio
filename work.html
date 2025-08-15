@@ -31,7 +31,7 @@
                             style="border: 2px solid #34495e; border-radius: 8px;"></iframe>
                     </div>
                     
-                    <div class="expandable-section">
+                    <div class="expandable-section qgis-project-section">
                         <h3 class="expandable-heading" onclick="toggleContent()">
                             QGIS Project: Housing Analysis in Sydney LGAs
                             <i class="fas fa-chevron-down" id="toggle-icon"></i>
@@ -72,7 +72,7 @@
                         <img src="assets/project1-img1.jpeg" alt="Project 1" class="project-image" id="project-image" onclick="toggleImage()">
                     </div>
                     
-                    <div class="expandable-section">
+                    <div class="expandable-section qgis-project-section">
                         <h3 class="expandable-heading" onclick="toggleContent2()">
                             Urban Planning Analysis
                             <i class="fas fa-chevron-down" id="toggle-icon2"></i>
@@ -117,26 +117,37 @@
         function toggleContent() {
             const content = document.getElementById('expandable-content');
             const icon = document.getElementById('toggle-icon');
+            const heading = document.querySelector('.qgis-project-section .expandable-heading');
             
             if (content.style.display === 'none' || content.style.display === '') {
                 content.style.display = 'block';
                 icon.className = 'fas fa-chevron-up';
+                heading.classList.add('expanded');
             } else {
                 content.style.display = 'none';
                 icon.className = 'fas fa-chevron-down';
+                heading.classList.remove('expanded');
             }
         }
 
         function toggleContent2() {
             const content = document.getElementById('expandable-content2');
             const icon = document.getElementById('toggle-icon2');
+            const heading = document.querySelectorAll('.qgis-project-section .expandable-heading')[1];
+            const projectImage = document.getElementById('project-image');
             
             if (content.style.display === 'none' || content.style.display === '') {
                 content.style.display = 'block';
                 icon.className = 'fas fa-chevron-up';
+                heading.classList.add('expanded');
+                // Show the detailed project image when expanded
+                projectImage.src = 'assets/project1.jpeg';
             } else {
                 content.style.display = 'none';
                 icon.className = 'fas fa-chevron-down';
+                heading.classList.remove('expanded');
+                // Show the overview image when collapsed
+                projectImage.src = 'assets/project1-img1.jpeg';
             }
         }
 

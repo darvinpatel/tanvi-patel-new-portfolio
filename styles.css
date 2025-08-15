@@ -302,6 +302,39 @@ body {
     overflow: hidden;
 }
 
+/* QGIS Project Section - Grey background for visual distinction */
+.qgis-project-section {
+    background: #f5f5f5;
+    border: 2px solid #d1d5db;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.qgis-project-section .expandable-heading {
+    background: #e5e7eb;
+    color: #374151;
+    border-bottom: 1px solid #d1d5db;
+}
+
+.qgis-project-section .expandable-heading:hover {
+    background: #d1d5db;
+}
+
+/* Expanded state - white background for heading */
+.qgis-project-section .expandable-heading.expanded {
+    background: white;
+    color: #34495e;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.qgis-project-section .expandable-heading.expanded:hover {
+    background: #f8f9fa;
+}
+
+.qgis-project-section .expandable-content {
+    background: #f9fafb;
+    border-top: 1px solid #e5e7eb;
+}
+
 .expandable-heading {
     background: #f8f9fa;
     color: #34495e;
